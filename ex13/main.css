@@ -1,0 +1,86 @@
+* {
+    padding: 0;
+    margin: 0;
+   }
+   .container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    
+   }
+   .image-wrapper {
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    position: absolute;
+   }
+   .left {
+    background-image: url('left.jpg');
+    background-position: right;
+    z-index: 4;
+   }
+   .right {
+    background-image: url('right.jpg');
+    background-position: left;
+    left: 50%;
+    z-index: 1;
+   }
+   hr {
+    height: 180px;
+    border: none;
+    border-left: solid 10px #76a89d;
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    top: 50%;
+    transform: translate(-48%, -48%)
+   }
+   #title {
+    font-size: 3rem;
+    text-align: center;
+    position: absolute;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    margin-left: 2rem;
+    transform: translate(-120%, -56%);
+    animation: showTitle 3s infinite ;
+   }
+
+/*def animation appelée showTitle*/
+   @keyframes showTitle {
+
+    0% {
+      transform: translate(-150%, -56%)/* le txt cmce tt a gauche de l'ecran*/
+    }
+    15% {
+      transform: translate(0%, -56%)/* en glissant vers le centre il devient visible*/
+    }
+    80% {
+      transform: translate(0%, -56%)/* txt visible au centre jsk atteindre 80% de l'ecran*/
+    }
+    94% {
+      transform: translate(-120%, -56%)/*repart vers la gauche pour disparaitre*/
+    }
+    100% {
+      transform: translate(-120%, -56%)/*completement repartie a gauche et caché*/
+    }
+
+   }
+   @media screen and (max-width: 600px) {
+    hr {
+      height: 136px;
+    }
+    .title {
+      font-size: 2rem
+    }
+   }
+   
+   @media screen and (max-aspect-ratio: 4/3) {
+    #title {
+      font-size: 2.5rem;
+    }
+    hr {
+      height: 140px;
+    }
+  }

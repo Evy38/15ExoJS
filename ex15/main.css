@@ -1,0 +1,19 @@
+#gameContainer {
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 24, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+#player {
+    width: 120px;
+    height: 140px;
+    background-image: url('img/face.png');
+    background-size: cover;
+    top: 100px; 
+    background-position: center;
+    position: absolute;
+    z-index: 1;
+}
